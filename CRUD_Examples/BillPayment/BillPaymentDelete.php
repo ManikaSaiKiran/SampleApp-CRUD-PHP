@@ -1,22 +1,11 @@
 <?php
 require "../../vendor/autoload.php";
+require "../../config.php";
 
 use QuickBooksOnline\API\DataService\DataService;
 use QuickBooksOnline\API\Core\Http\Serialization\XmlObjectSerializer;
 use QuickBooksOnline\API\Facades\BillPayment;
-// Prep Data Services
-$dataService = DataService::Configure(array(
-    'auth_mode' => 'oauth2',
-    'ClientID' => "",
-    'ClientSecret' => "",
-    'accessTokenKey' =>
-    '',
-    'refreshTokenKey' => "",
-    'QBORealmID' => "",
-    'baseUrl' => "Development"
-));
-$dataService->setLogLocation("");
-$dataService->throwExceptionOnError(true);
+$dataService = getDataService();
 
 $billpayment = $dataService->FindbyId('billpayment', 213);
 

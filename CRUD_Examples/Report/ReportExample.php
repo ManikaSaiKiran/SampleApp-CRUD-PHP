@@ -1,5 +1,6 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
+require "../../config.php";
 
 use QuickBooksOnline\API\Core\ServiceContext;
 use QuickBooksOnline\API\DataService\DataService;
@@ -12,16 +13,7 @@ use QuickBooksOnline\API\ReportService\ReportService;
 use QuickBooksOnline\API\ReportService\ReportName;
 
 
-// Prep Data Services
-$dataService = DataService::Configure(array(
-    'auth_mode' => 'oauth2',
-    'ClientID' => "",
-    'ClientSecret' => "",
-    'accessTokenKey' => '',
-    'refreshTokenKey' => "",
-    'QBORealmID' => "",
-    'baseUrl' => "Development"
-));
+$dataService = getDataService();
 $serviceContext = $dataService->getServiceContext();
 // Prep Data Services
 $reportService = new ReportService($serviceContext);
