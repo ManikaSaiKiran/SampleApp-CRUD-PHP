@@ -1,5 +1,9 @@
 {
     "require": {
         "quickbooks/v3-php-sdk": "v6.2.0"
+    },
+    "config": {
+        "prefer-dist": true,
+        "github-protocols": ["https"]
     }
 }
