@@ -40,7 +40,7 @@ In order to successfully run this sample app you need a few things:
 1. Clone the GitHub repo to your computer
 2. Check and update latest PHP SDK version in composer.json file  
 3. Run `composer install` from project folder location in Terminal
-4. If you updated composer.json, run `composer update`
+4. If you updated composer.json, run `composer update` (optional)
 5. Configure OAuth 2 tokens, Client ID, Client Secret, Company ID, and log file location in the centralized config.php file
 
 ## Running the code
